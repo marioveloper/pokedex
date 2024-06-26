@@ -41,9 +41,9 @@ export default function LayoutHome() {
   };
 
 
-  const filterPokemons = search?.length > 0 
-  ? globalPokemon?.filter(pokemon =>  pokemon?.name?.includes(search))
-  : arrayPokemon
+  const filterPokemons = search?.length > 0
+    ? globalPokemon?.filter(pokemon => pokemon?.name?.includes(search))
+    : arrayPokemon
 
 
 
@@ -56,19 +56,19 @@ export default function LayoutHome() {
 
   return (
     <div className={css.layout}>
-      <Header obtenerSearch={obtenerSearch}  />
+      <Header obtenerSearch={obtenerSearch} />
 
       <section className={css.section_pagination}>
         <div className={css.div_pagination}>
           <span className={css.item_izquierdo}
-          
-          onClick={() => {
-            if (xpage === 1) {
-              return console.log("no puedo retroceder");
-            }
-            setXpage(xpage - 1);
-          }}
-          
+
+            onClick={() => {
+              if (xpage === 1) {
+                return console.log("no puedo retroceder");
+              }
+              setXpage(xpage - 1);
+            }}
+
           >
             <FaIcons.FaAngleLeft />
           </span>
